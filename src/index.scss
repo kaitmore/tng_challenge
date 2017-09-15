@@ -1,0 +1,101 @@
+$red: #b42525;
+$darkred: #961b1b;
+$yellow: #e8c23d;
+$blue: #1F9BA5;
+$darkblue: #0C1C36;
+$almostblack: #090E11;
+$grey: #121D25;
+
+@import url('https://fonts.googleapis.com/css?family=Play');
+
+body {
+    background: #000;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+  }
+  h1 {
+    color: yellow;
+    font-size: 40px;
+    font-family: 'Play', sans-serif;
+    text-transform: uppercase;
+  }
+  select {
+    -webkit-appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24' fill ='#6db76c' ><path fill='#fff' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+    background-position: 100% 55%;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: none;
+    height: 46px;
+    width: 70px;
+    color: white;
+  }
+  .bg {
+    background: $blue;
+    padding: 0 15px;
+    margin: 9px 0;
+    height: 47px;                  
+  }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .caption{
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+  }
+  .nav {
+    width: 55vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 15px solid $grey;
+    background: linear-gradient(to bottom, #000000 0%, $almostblack 100%);
+  }
+  table {
+    border-collapse: collapse; 
+    margin: 2vh;
+    width: 55vw;
+    background: $almostblack;
+          
+    .tableRow {
+        margin: 10px;
+        width: 100px;
+        transition: ease-in .3s;
+      }
+    .tableRow:hover {
+        background:$grey;
+      }
+    th { 
+        padding: 3vh;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        background: $red;
+        border-top: 5px solid $darkred;
+        border-bottom: 5px solid $darkred;         
+        text-transform: uppercase;
+      }
+      td {         
+        height: 40px;
+        padding: 2vh;
+    }
+      
+  }
+  
