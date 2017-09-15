@@ -5,6 +5,11 @@ const GET_EPISODES_SUCCESS = "GET_EPISODES_SUCCESS"
 
 const initialState = []
 
+axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded, application/json'
+axios.defaults.headers.common.crossDomain = true 
+axios.defaults.headers.common['Access-Control-Allow-Origin'] = '' 
+axios.defaults.headers.common['Accept'] = 'application/json, text/plain'
+
 // Action Creator
 const getEpisodesSuccess = episodes => ({ type: GET_EPISODES_SUCCESS, episodes })
 
