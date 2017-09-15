@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { error } from './error'
 
 const GET_EPISODES_SUCCESS = "GET_EPISODES_SUCCESS"
@@ -17,10 +16,9 @@ export default function (state = initialState, action) {
             return state
     }
 }
-
-// Thunk
+               
 export const getEpisodes = () => dispatch => {
-    axios.get('http://ec2-52-90-200-167.compute-1.amazonaws.com:8080')
-        .then(res => dispatch(getEpisodesSuccess(res.data)))
-        .catch(err => { dispatch(error(err)) })
+    fetch('http://ec2-52-90-200-167.compute-1.amazonaws.com:8080')
+        .then(res => res.json())
+        .then(res => dispatch(getEpisodesSuccess(res)))
 }
